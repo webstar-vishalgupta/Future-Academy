@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Future Academy - Test your knowledge with interactive quizzes and assessments">
+    <title>Future Academy - Quizzes & Tests</title>
+    <link rel="stylesheet" href="css/pages/home.css">
+    <link rel="stylesheet" href="css/pages/quizzes.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Modern Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="/" class="logo">Future Academy</a>
+                <a href="login.html" class="login-btn">Log In</a>
+            </div>
+            <div class="nav-right">
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="study-materials.html" class="nav-link">Study Materials</a>
+                    <a href="progress.html" class="nav-link">My Progress</a>
+                    <a href="quizzes.html" class="nav-link active">Quizzes & Tests</a>
+                    <a href="forum.html" class="nav-link">Community Forum</a>
+                    <div class="theme-toggle">
+                        <input type="checkbox" id="dark-mode-toggle">
+                        <label for="dark-mode-toggle">
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-moon"></i>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero quizzes-hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Quizzes & Tests</h1>
+                <p>Challenge yourself with our interactive quizzes and assessments. Track your progress and improve your understanding.</p>
+                <div class="search-container">
+                    <input type="text" placeholder="Search quizzes..." class="search-input">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Categories -->
+    <section class="quiz-categories">
+        <div class="categories-container">
+            <div class="filter-buttons">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Mathematics</button>
+                <button class="filter-btn">Science</button>
+                <button class="filter-btn">Language Arts</button>
+                <button class="filter-btn">Social Studies</button>
+            </div>
+
+            <div class="quiz-grid">
+                <!-- Mathematics Quiz -->
+                <div class="quiz-card">
+                    <div class="quiz-icon">
+                        <i class="fas fa-square-root-alt"></i>
+                    </div>
+                    <h3>Advanced Algebra</h3>
+                    <p>Test your knowledge of advanced algebraic concepts and equations.</p>
+                    <div class="quiz-meta">
+                        <span class="difficulty advanced">Advanced</span>
+                        <span><i class="fas fa-clock"></i> 45 mins</span>
+                        <span><i class="fas fa-question-circle"></i> 25 Questions</span>
+                    </div>
+                    <div class="quiz-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%;">Not Started</div>
+                        </div>
+                    </div>
+                    <a href="#" class="quiz-action">Start Quiz <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Science Quiz -->
+                <div class="quiz-card">
+                    <div class="quiz-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3>Chemistry Basics</h3>
+                    <p>Review fundamental chemistry concepts and chemical reactions.</p>
+                    <div class="quiz-meta">
+                        <span class="difficulty intermediate">Intermediate</span>
+                        <span><i class="fas fa-clock"></i> 30 mins</span>
+                        <span><i class="fas fa-question-circle"></i> 20 Questions</span>
+                    </div>
+                    <div class="quiz-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%;">60% Complete</div>
+                        </div>
+                    </div>
+                    <a href="#" class="quiz-action">Continue Quiz <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Language Arts Quiz -->
+                <div class="quiz-card">
+                    <div class="quiz-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Literature Analysis</h3>
+                    <p>Analyze literary elements and themes in classic literature.</p>
+                    <div class="quiz-meta">
+                        <span class="difficulty beginner">Beginner</span>
+                        <span><i class="fas fa-clock"></i> 20 mins</span>
+                        <span><i class="fas fa-question-circle"></i> 15 Questions</span>
+                    </div>
+                    <div class="quiz-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%;">Completed</div>
+                        </div>
+                    </div>
+                    <a href="#" class="quiz-action">Review Quiz <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Social Studies Quiz -->
+                <div class="quiz-card">
+                    <div class="quiz-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>World History</h3>
+                    <p>Test your knowledge of major historical events and civilizations.</p>
+                    <div class="quiz-meta">
+                        <span class="difficulty intermediate">Intermediate</span>
+                        <span><i class="fas fa-clock"></i> 35 mins</span>
+                        <span><i class="fas fa-question-circle"></i> 30 Questions</span>
+                    </div>
+                    <div class="quiz-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 30%;">30% Complete</div>
+                        </div>
+                    </div>
+                    <a href="#" class="quiz-action">Continue Quiz <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Future Academy</h3>
+                    <p>Empowering students with interactive learning tools and resources to excel in their academic journey.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/18ijftHaZ4/" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://x.com/NawleshSir?t=JOdcvDkFOIEE5K9qgRf5kw&s=08" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/futureacademy.nawlesh_sir/" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com/@nawleshsirofficial?si=Ry_-7fsEA4RZ3Y3a" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="study-materials.html">Study Materials</a></li>
+                        <li><a href="progress.html">My Progress</a></li>
+                        <li><a href="quizzes.html">Quizzes & Tests</a></li>
+                        <li><a href="forum.html">Community Forum</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            info@futureacademy.edu
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            (123) 456-7890
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            123 Learning St, Education City
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for updates and learning tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Future Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html> 

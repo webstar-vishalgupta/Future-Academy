@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Future Academy - Student Registration - Join our academic community">
+    <title>Future Academy - Student Registration</title>
+    <link rel="stylesheet" href="css/pages/home.css">
+    <link rel="stylesheet" href="css/pages/register-student.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Modern Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="/" class="logo">Future Academy</a>
+            </div>
+            <div class="nav-right">
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="study-materials.html" class="nav-link">Study Materials</a>
+                    <a href="classes.html" class="nav-link">Classes</a>
+                    <a href="contact.html" class="nav-link">Contact Us</a>
+                    <a href="forum.html" class="nav-link">Community Forums</a>
+                    <div class="theme-toggle">
+                        <input type="checkbox" id="dark-mode-toggle">
+                        <label for="dark-mode-toggle">
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-moon"></i>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero register-hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Student Registration Pannel</h1>
+                <p>Join Future Academy and begin your journey towards academic excellence</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="registration-section">
+        <div class="registration-container">
+            <form id="studentRegistrationForm" class="registration-form" enctype="multipart/form-data">
+                <!-- Basic Details -->
+                <div class="form-section">
+                    <h2><i class="fas fa-user"></i> Basic Details</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span class="required">*</span></label>
+                            <input type="text" id="fullName" class="form-input" name="fullName" required>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dateOfBirth">Date of Birth <span class="required">*</span></label>
+                            <input type="date" id="dateOfBirth" class="form-input" name="dateOfBirth" required>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gender">Gender <span class="required">*</span></label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fatherName">Father's Name <span class="required">*</span></label>
+                            <input type="text" id="fatherName" class="form-input" name="fatherName" required>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="motherName">Mother's Name <span class="required">*</span></label>
+                            <input type="text" id="motherName" name="motherName" required>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="studentMobile">Student Mobile Number <span class="required">*</span></label>
+                            <input type="tel" id="studentMobile" name="studentMobile" pattern="[0-9]{10}" required>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="studentWhatsapp">Student WhatsApp Number <span class="required">*</span></label>
+                            <input type="tel" id="studentWhatsapp" name="studentWhatsapp" pattern="[0-9]{10}" required>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="aadharNumber">Aadhar Number <span class="required">*</span></label>
+                            <input type="text" id="aadharNumber" name="aadharNumber" pattern="[0-9]{12}" maxlength="12" required>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="parentMobile">Parent's Mobile Number <span class="required">*</span></label>
+                            <input type="tel" id="parentMobile" name="parentMobile" pattern="[0-9]{10}" required>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">Category <span class="required">*</span></label>
+                            <select id="category" name="category" required>
+                                <option value="">Select Category</option>
+                                <option value="GEN">General (GEN)</option>
+                                <option value="OBC">Other Backward Class (OBC)</option>
+                                <option value="SC">Scheduled Caste (SC)</option>
+                                <option value="ST">Scheduled Tribe (ST)</option>
+                            </select>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email ID <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="village">Village/City <span class="required">*</span></label>
+                            <input type="text" id="village" class="form-input" name="village" required>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pinCode">Pin Code <span class="required">*</span></label>
+                            <input type="text" id="pinCode" class="form-input" name="pinCode" pattern="[0-9]{6}" required>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Academic Details -->
+                <div class="form-section">
+                    <h2><i class="fas fa-graduation-cap"></i> Academic Details</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="classApplying">Class Applying For <span class="required">*</span></label>
+                            <select id="classApplying" class="form-input" name="classApplying" required>
+                                <option value="">Select Class</option>
+                                <option value="9">9th Standard</option>
+                                <option value="10">10th Standard</option>
+                                <option value="11">11th Standard</option>
+                                <option value="12">12th Standard</option>
+                            </select>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="board">Board <span class="required">*</span></label>
+                            <select id="board" class="form-input" name="board" required>
+                                <option value="">Select Board</option>
+                                <option value="cbse">CBSE</option>
+                                <option value="icse">BSEB</option>
+                                <option value="state">Other</option>
+                            </select>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Document Upload -->
+                <div class="form-section">
+                    <h2><i class="fas fa-file-upload"></i> Document Upload</h2>
+                    <div class="form-grid">
+                        <div class="form-group photo-upload">
+                            <label for="photo">Passport Size Photo <span class="required">*</span></label>
+                            <div class="upload-container">
+                                <div class="upload-preview">
+                                    <img id="photoPreview" src="images/placeholder-avatar.png" alt="Photo preview">
+                                </div>
+                                <div class="upload-controls">
+                                    <input type="file" id="photo" name="photo" accept="image/jpeg,image/png" required>
+                                    <label for="photo" class="upload-btn">
+                                        <i class="fas fa-upload"></i> Choose Photo
+                                    </label>
+                                    <p class="upload-info">JPG or PNG, max 2MB</p>
+                                </div>
+                            </div>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Submit Registration
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="fas fa-check-circle"></i>
+                <h2>Registration Successful!</h2>
+            </div>
+            <div class="modal-body">
+                <p>Thank you for registering with Future Academy. We will review your application and contact you soon.</p>
+            </div>
+            <div class="modal-footer">
+                <button onclick="window.location.href='index.html'" class="modal-btn">
+                    <i class="fas fa-home"></i> Return to Home
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Future Academy</h3>
+                    <p>Empowering students with interactive learning tools and resources to excel in their academic journey.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/18ijftHaZ4/" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://x.com/NawleshSir?t=JOdcvDkFOIEE5K9qgRf5kw&s=08" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/futureacademy.nawlesh_sir/" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com/@nawleshsirofficial?si=Ry_-7fsEA4RZ3Y3a" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="study-materials.html">Study Materials</a></li>
+                        <li><a href="classes.html">Classes</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="forum.html">Community Forums</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            nawleshsir@gmail.com
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            91+ 9309323018
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Ishuapur Bajar, Near KYP, 841411
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for updates and learning tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Future Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/register-student.js"></script>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-storage-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+
+    <!-- Your Firebase configuration -->
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyD98e6xdTvKbP9NcCFWB4dzuIBoWyFckCg",
+            authDomain: "future-academy-de740.firebaseapp.com",
+            projectId: "future-academy-de740",
+            storageBucket: "future-academy-de740.firebasestorage.app",
+            messagingSenderId: "747367460447",
+            appId: "1:747367460447:web:63498a7353d70525b8f5ea",
+            measurementId: "G-0S4295T1N7"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const storage = firebase.storage();
+        const db = firebase.firestore();
+
+        // Handle form submission
+        document.getElementById('studentRegistrationForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // Show loading state
+            const submitBtn = this.querySelector('.submit-btn');
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+            submitBtn.disabled = true;
+
+            try {
+                // Get form data
+                const formData = new FormData(this);
+                const photoFile = formData.get('photo');
+
+                // Upload photo to Firebase Storage
+                const storageRef = storage.ref('student-photos/' + photoFile.name);
+                await storageRef.put(photoFile);
+                const photoUrl = await storageRef.getDownloadURL();
+
+                // Create student data object
+                const studentData = {
+                    fullName: formData.get('fullName'),
+                    dateOfBirth: formData.get('dateOfBirth'),
+                    gender: formData.get('gender'),
+                    fatherName: formData.get('fatherName'),
+                    motherName: formData.get('motherName'),
+                    studentMobile: formData.get('studentMobile'),
+                    studentWhatsapp: formData.get('studentWhatsapp'),
+                    aadharNumber: formData.get('aadharNumber'),
+                    parentMobile: formData.get('parentMobile'),
+                    category: formData.get('category'),
+                    email: formData.get('email'),
+                    village: formData.get('village'),
+                    pinCode: formData.get('pinCode'),
+                    classApplying: formData.get('classApplying'),
+                    board: formData.get('board'),
+                    photoUrl: photoUrl,
+                    submissionDate: new Date().toISOString()
+                };
+
+                // Save to Firestore
+                await db.collection('students').add(studentData);
+
+                // Show success modal
+                document.getElementById('successModal').style.display = 'flex';
+
+                // Reset form
+                this.reset();
+                document.getElementById('photoPreview').src = 'images/placeholder-avatar.png';
+
+            } catch (error) {
+                console.error('Error:', error);
+                alert('There was an error submitting the form. Please try again.');
+            } finally {
+                // Reset button state
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Submit Registration';
+                submitBtn.disabled = false;
+            }
+        });
+
+        // Photo preview functionality
+        document.getElementById('photo').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('photoPreview').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html> 
