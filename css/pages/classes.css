@@ -1,0 +1,351 @@
+/* Classes Hero Section */
+.classes-hero {
+    /* background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%); */
+    padding: 6rem 2rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    min-height: 60vh;
+}
+
+.classes-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.classes-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.search-container {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+}
+
+.search-input {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    background-color: rgb(255, 255, 255);
+}
+
+.search-btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    color: white;
+    background-color: #111827;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: var(--primary-color-dark);
+    transform: translateY(-2px);
+}
+
+/* Classes Section */
+.classes-section {
+    padding: 4rem 2rem;
+    background-color: var(--bg-color);
+}
+
+.classes-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Filter Buttons */
+.classes-filters {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Classes Grid */
+.classes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* Class Card */
+.class-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.class-card:hover {
+    transform: translateY(-5px);
+}
+
+.class-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.class-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.class-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.class-card:hover .class-overlay {
+    opacity: 1;
+}
+
+.play-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.play-btn:hover {
+    transform: scale(1.1);
+    background-color: var(--primary-color-dark);
+}
+
+.class-content {
+    padding: 1.5rem;
+}
+
+.class-category {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.class-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.class-content p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.class-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+    flex-wrap: wrap;
+}
+
+.class-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.class-meta i {
+    color: var(--primary-color);
+}
+
+.class-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.class-btn:hover {
+    background-color: var(--primary-color-dark);
+    transform: translateY(-2px);
+}
+
+/* Dark Mode Styles */
+.dark-mode .class-card {
+    background-color: var(--card-bg-dark);
+}
+
+.dark-mode .class-content h3 {
+    color: var(--text-color-dark);
+}
+
+.dark-mode .class-content p,
+.dark-mode .class-meta {
+    color: var(--text-secondary-dark);
+}
+
+.dark-mode .filter-btn {
+    background-color: var(--card-bg-dark);
+    color: var(--text-color-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .classes-hero {
+        padding: 4rem 1rem;
+    }
+
+    .classes-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .classes-section {
+        padding: 2rem 1rem;
+    }
+
+    .filter-buttons {
+        gap: 0.5rem;
+    }
+
+    .filter-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .classes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .classes-hero h1 {
+        font-size: 2rem;
+    }
+
+    .classes-hero p {
+        font-size: 1rem;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+
+    .filter-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .class-image {
+        height: 180px;
+    }
+}
+
+
+
+/* Back Button Section */
+.back-section {
+    padding: 2rem;
+    background-color: var(--bg-color);
+    margin-top: 2rem;
+}
+
+.back-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    color: rgb(0, 47, 255);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn:hover {
+    background-color: var(--primary-color-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn i {
+    font-size: 1.1rem;
+}
+
+/* Dark Mode Styles for Back Button */
+.dark-mode .back-btn {
+    background-color: var(--primary-color-dark);
+}
+
+.dark-mode .back-btn:hover {
+    background-color: var(--primary-color);
+} 

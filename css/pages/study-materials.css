@@ -1,0 +1,549 @@
+/* Modern Study Materials Page Styles */
+
+/* Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Modern Color Palette */
+    --color-primary: #2563eb;
+    --color-secondary: #7c3aed;
+    --color-accent: #f59e0b;
+    --color-dark: #111827;
+    --color-light: #f3f4f6;
+    --color-white: #ffffff;
+    --color-success: #10b981;
+    --color-error: #ef4444;
+    
+    /* Typography */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+/* Reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--color-dark);
+    background: var(--color-light);
+}
+
+/* Study Materials Header */
+.study-header {
+    background: var(--color-white);
+    padding: 8rem 5% 4rem;
+    text-align: center;
+}
+
+.study-header h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+    color: var(--color-dark);
+    font-weight: 700;
+}
+
+.study-header p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #6b7280;
+    font-size: 1.1rem;
+}
+
+/* Search and Filters */
+.search-filters {
+    background: var(--color-white);
+    padding: 2rem 5%;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.search-filters-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-bar {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background: transparent;
+    color: #6b7280;
+    border: 1px solid #e5e7eb;
+    cursor: pointer;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+}
+
+/* Materials Grid */
+.materials-section {
+    padding: 4rem 5%;
+}
+
+.materials-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.material-card {
+    background: var(--color-white);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.material-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.material-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.material-content {
+    padding: 2rem;
+}
+
+.material-tag {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--color-primary);
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.material-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--color-dark);
+}
+
+.material-description {
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.material-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.material-stats {
+    display: flex;
+    gap: 1rem;
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.material-stat {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.material-action {
+    color: var(--color-primary);
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.material-action:hover {
+    color: var(--color-secondary);
+}
+
+/* Loading State */
+.loading-skeleton {
+    background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-filters-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-bar {
+        min-width: 100%;
+    }
+
+    .filter-buttons {
+        justify-content: center;
+    }
+
+    .materials-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .study-header {
+        padding: 6rem 5% 3rem;
+    }
+
+    .study-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .materials-section {
+        padding: 2rem 5%;
+    }
+
+    .material-content {
+        padding: 1.5rem;
+    }
+}
+
+/* Study Materials Hero Section */
+.study-materials-hero {
+    /* background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); */
+    min-height: 65vh;
+    padding: 6rem 2rem 4rem;
+    text-align: center;
+    color: var(--color-white);
+}
+
+.study-materials-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.study-materials-hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+/* Search Container */
+.search-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+}
+
+.search-input {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.search-btn {
+    background: var(--color-dark);
+    color: var(--color-white);
+    border: none;
+    border-radius: 50px;
+    padding: 0 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+    background: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+/* Materials Section */
+.materials {
+    padding: 4rem 5%;
+}
+
+.materials-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Filter Buttons */
+.materials-filters {
+    margin-bottom: 3rem;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--color-primary);
+    border-radius: 50px;
+    background: transparent;
+    color: var(--color-primary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Materials Grid */
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.material-card {
+    background: var(--color-white);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.material-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.material-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--color-primary);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--color-white);
+    font-size: 1.5rem;
+}
+
+.material-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-dark);
+}
+
+.material-card p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.material-meta {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+}
+
+.material-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.material-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-primary);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.material-action:hover {
+    color: var(--color-secondary);
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] .material-card {
+    background: var(--color-dark-card);
+}
+
+[data-theme="dark"] .material-card h3 {
+    color: var(--color-light);
+}
+
+[data-theme="dark"] .material-card p {
+    color: var(--color-gray);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .study-materials-hero {
+        padding: 5rem 1rem 3rem;
+    }
+
+    .study-materials-hero h1 {
+        font-size: 2rem;
+    }
+
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .materials-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .material-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .study-materials-hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    .search-btn {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .materials-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Back Button Section */
+.back-section {
+    padding: 2rem;
+    background-color: var(--bg-color);
+    margin-top: 2rem;
+}
+
+.back-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    color: rgb(0, 47, 255);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn:hover {
+    background-color: var(--primary-color-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn i {
+    font-size: 1.1rem;
+}
+
+/* Dark Mode Styles for Back Button */
+.dark-mode .back-btn {
+    background-color: var(--primary-color-dark);
+}
+
+.dark-mode .back-btn:hover {
+    background-color: var(--primary-color);
+} 

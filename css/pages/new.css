@@ -1,0 +1,51 @@
+:root {
+    /* Modern Color Palette */
+    --color-primary: #2563eb;
+    --color-secondary: #7c3aed;
+    --color-accent: #f59e0b;
+    --color-dark: #111827;
+    --color-light: #f3f4f6;
+    --color-white: #ffffff;
+    --color-success: #10b981;
+    --color-error: #ef4444;
+    
+    /* Typography */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+/* Reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--color-dark);
+    overflow-x: hidden;}
+
+
+    /* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 8rem 5% 5rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    position: relative;
+    overflow: hidden;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 80%;
+    height: 200%;
+    background: radial-gradient(circle, var(--color-primary) 0%, transparent 100%);
+    opacity: 0.1;
+    transform: rotate(-45deg);
+}

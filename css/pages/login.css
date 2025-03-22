@@ -1,0 +1,295 @@
+/* Login Page Styles */
+
+/* Auth Section */
+.auth-section {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1rem;
+    margin: 5rem 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.auth-card {
+    background: var(--bg-color);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.auth-card h1 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.auth-subtitle {
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Form Styles */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.form-group input {
+    padding: 0.8rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-group input::placeholder {
+    color: #94a3b8;
+}
+
+/* Password Help Text */
+.form-help {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+/* Checkbox Styles */
+.terms-checkbox {
+    margin-top: 0.5rem;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.terms-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 0.2rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.terms-checkbox label {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+}
+
+.terms-checkbox a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.terms-checkbox a:hover {
+    color: var(--primary-color-dark);
+    text-decoration: underline;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-top: 0.5rem;
+}
+
+.forgot-password a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+    color: var(--primary-color-dark);
+    text-decoration: underline;
+}
+
+/* Button Styles */
+.auth-btn {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.auth-btn:hover {
+    background: var(--primary-color-dark);
+    transform: translateY(-2px);
+}
+
+.auth-btn:active {
+    transform: translateY(0);
+}
+
+/* Error Message */
+.auth-error-message {
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    color: #dc2626;
+}
+
+.auth-error-message p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Alternate Auth Options */
+.auth-alternate {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.auth-alternate p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.auth-alternate a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.auth-alternate a:hover {
+    color: var(--primary-color-dark);
+    text-decoration: underline;
+}
+
+/* Dark Mode Styles */
+.dark-mode .auth-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d3748 100%);
+}
+
+.dark-mode .auth-card {
+    background: var(--bg-color-dark);
+}
+
+.dark-mode .form-group input {
+    background: var(--bg-color-dark);
+    border-color: #374151;
+    color: var(--text-color);
+}
+
+.dark-mode .form-group input:focus {
+    border-color: var(--primary-color);
+}
+
+.dark-mode .terms-checkbox input[type="checkbox"] {
+    border-color: #374151;
+    background: var(--bg-color-dark);
+}
+
+.dark-mode .form-help {
+    color: #94a3b8;
+}
+
+.dark-mode .auth-error-message {
+    background: #7f1d1d;
+    border-color: #991b1b;
+    color: #fecaca;
+}
+
+.dark-mode .auth-alternate {
+    border-top-color: #374151;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .auth-section {
+        padding: 2rem 1rem;
+    }
+
+    .auth-card {
+        padding: 2rem;
+    }
+
+    .auth-card h1 {
+        font-size: 2rem;
+    }
+
+    .auth-subtitle {
+        font-size: 1rem;
+    }
+
+    .terms-checkbox label {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 1.5rem;
+    }
+
+    .auth-card h1 {
+        font-size: 1.8rem;
+    }
+
+    .form-group input {
+        padding: 0.7rem 0.9rem;
+    }
+
+    .checkbox-wrapper {
+        gap: 0.5rem;
+    }
+
+    .terms-checkbox input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
+} 

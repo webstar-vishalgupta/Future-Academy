@@ -1,0 +1,286 @@
+/* Teachers Hero Section */
+.teachers-hero {
+    /* background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%); */
+    min-height: 40vh;
+    padding: 6rem 2rem;
+    margin-top: 5rem;
+    text-align: center;
+    color: white;
+}
+
+.teachers-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.teachers-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Teachers Section */
+.teachers-section {
+    padding: 4rem 2rem;
+    background-color: var(--bg-color);
+}
+
+.teachers-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Filter Buttons */
+.teachers-filters {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.filter-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Teachers Grid */
+.teachers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* Teacher Card */
+.teacher-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    
+}
+
+.teacher-card:hover {
+    transform: translateY(-5px);
+}
+
+.teacher-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.teacher-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.teacher-card:hover .teacher-image img {
+    transform: scale(1.05);
+}
+
+.teacher-info {
+    padding: 1.5rem;
+}
+
+.teacher-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.teacher-info .subject {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.teacher-info .qualification,
+.teacher-info .experience {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.teacher-stats {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    color: var(--text-secondary);
+}
+
+.teacher-stats span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.teacher-stats i {
+    color: var(--primary-color);
+}
+
+.teacher-info .bio {
+    margin: 1rem 0;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.teacher-social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.teacher-social .social-link {
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+}
+
+.teacher-social .social-link:hover {
+    color: var(--primary-color);
+}
+
+/* Dark Mode Styles */
+.dark-mode .teacher-card {
+    background-color: var(--card-bg-dark);
+}
+
+.dark-mode .filter-btn {
+    background-color: var(--card-bg-dark);
+    color: var(--text-color-dark);
+}
+
+.dark-mode .teacher-info h3,
+.dark-mode .teacher-info .bio {
+    color: var(--text-color-dark);
+}
+
+.dark-mode .teacher-info .qualification,
+.dark-mode .teacher-info .experience,
+.dark-mode .teacher-stats {
+    color: var(--text-secondary-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .teachers-hero {
+        padding: 4rem 1rem;
+    }
+
+    .teachers-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .teachers-section {
+        padding: 2rem 1rem;
+    }
+
+    .filter-buttons {
+        gap: 0.5rem;
+    }
+
+    .filter-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .teachers-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .teachers-hero h1 {
+        font-size: 2rem;
+    }
+
+    .teachers-hero p {
+        font-size: 1rem;
+    }
+
+    .filter-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .teacher-image {
+        height: 380px;
+    }
+}
+
+/* Back Button Section */
+.back-section {
+    padding: 2rem;
+    background-color: var(--bg-color);
+    margin-top: 2rem;
+}
+
+.back-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    color: rgb(0, 47, 255);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn:hover {
+    background-color: var(--primary-color-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn i {
+    font-size: 1.1rem;
+}
+
+/* Dark Mode Styles for Back Button */
+.dark-mode .back-btn {
+    background-color: var(--primary-color-dark);
+}
+
+.dark-mode .back-btn:hover {
+    background-color: var(--primary-color);
+} 
+ 

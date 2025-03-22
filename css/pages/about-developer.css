@@ -1,0 +1,352 @@
+/* Developer Hero Section */
+.developer-hero {
+    /* background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); */
+    min-height: 40vh;
+    padding: 6rem 2rem;
+    text-align: center;
+    color: white;
+    margin-top: 5rem;
+}
+
+.developer-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.developer-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Developer Section */
+.developer-section {
+    padding: 4rem 2rem;
+    background: var(--bg-color);
+}
+
+.developer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Developer Profile */
+.developer-profile {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--primary-color);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-content {
+    flex: 1;
+}
+
+.profile-content h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--heading-color);
+}
+
+.profile-content .title {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.profile-content .social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.profile-content .social-link {
+    width: 40px;
+    height: 40px;
+    background: var(--bg-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.profile-content .social-link:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Developer Info */
+.developer-info {
+    display: grid;
+    gap: 2rem;
+}
+
+.info-section {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--heading-color);
+}
+
+.info-section p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: var(--bg-color);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    background: var(--hover-color);
+}
+
+.skill-item i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.skill-item span {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    padding: 1.5rem;
+    background: var(--bg-color);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    background: var(--hover-color);
+}
+
+.project-card h4 {
+    color: var(--heading-color);
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] .developer-profile,
+[data-theme="dark"] .info-section {
+    background: var(--card-bg-dark);
+}
+
+[data-theme="dark"] .skill-item,
+[data-theme="dark"] .project-card {
+    background: var(--bg-color-dark);
+}
+
+[data-theme="dark"] .skill-item:hover,
+[data-theme="dark"] .project-card:hover {
+    background: var(--hover-color-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .developer-hero {
+        padding: 4rem 1rem;
+    }
+
+    .developer-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .developer-profile {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .profile-content .social-links {
+        justify-content: center;
+    }
+
+    .developer-section {
+        padding: 2rem 1rem;
+    }
+
+    .info-section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .developer-hero h1 {
+        font-size: 2rem;
+    }
+
+    .profile-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+    }
+
+    .profile-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+} 
+
+
+
+/* Back Button Section */
+.back-section {
+    padding: 2rem;
+    background-color: var(--bg-color);
+    margin-top: 2rem;
+}
+
+.back-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    color: rgb(0, 47, 255);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn:hover {
+    background-color: var(--primary-color-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn i {
+    font-size: 1.1rem;
+}
+
+/* Dark Mode Styles for Back Button */
+.dark-mode .back-btn {
+    background-color: var(--primary-color-dark);
+}
+
+.dark-mode .back-btn:hover {
+    background-color: var(--primary-color);
+} 
+
+/* More About Section */
+.more-about-section {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.more-about-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
+}
+
+.more-about-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.3);
+    background: linear-gradient(135deg, #357abd, #4a90e2);
+}
+
+.more-about-btn i {
+    transition: transform 0.3s ease;
+}
+
+.more-about-btn:hover i {
+    transform: translateX(5px);
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] .more-about-btn {
+    background: linear-gradient(135deg, #357abd, #4a90e2);
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.1);
+}
+
+[data-theme="dark"] .more-about-btn:hover {
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .more-about-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+} 

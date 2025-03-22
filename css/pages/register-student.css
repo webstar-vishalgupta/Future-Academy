@@ -1,0 +1,296 @@
+/* Registration Hero Section */
+.register-hero {
+    /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../images/hero/registration-bg.jpg'); */
+    background-size: cover;
+    background-position: center;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    margin-top: 5rem;
+}
+
+.register-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Registration Form Section */
+.registration-section {
+    padding: 2rem 1rem;
+    background-color: var(--bg-color);
+}
+
+.registration-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.form-section {
+    margin-bottom: 2.5rem;
+}
+
+#fullName, #dateOfBirth, #gender, #fatherName, #motherName, #callingNumber, #whatsappNumber, #email, #village, #pinCode, #classApplying, #board, #category, #studentMobile, #studentWhatsapp, #parentMobile, #aadharNumber{
+    color: #000000;
+    background-color:#d6e2fcc2;
+}
+
+.form-section h2 {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-section h2 i {
+    color: var(--primary-color);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.required {
+    color: #ff4444;
+    margin-left: 0.2rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.1);
+}
+
+.error-message {
+    display: none;
+    color: #ff4444;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Photo Upload Styles */
+.photo-upload {
+    grid-column: span 2;
+}
+
+.upload-container {
+    display: flex;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.upload-preview {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: var(--input-bg);
+    border: 2px dashed var(--border-color);
+}
+
+.upload-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.upload-controls {
+    flex: 1;
+}
+
+.upload-controls input[type="file"] {
+    display: none;
+}
+
+.upload-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: rgb(96, 194, 66);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.upload-info {
+    margin-top: 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+/* Submit Button */
+.form-actions {
+    text-align: center;
+    margin-top: 2rem;
+
+}
+
+.submit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    background-color: rgb(96, 194, 66);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: rgb(96, 194, 66);
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Success Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    margin-bottom: 1.5rem;
+}
+
+.modal-header i {
+    font-size: 4rem;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+.modal-header h2 {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.modal-body {
+    margin-bottom: 2rem;
+}
+
+.modal-body p {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.modal-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+}
+
+.modal-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Dark Mode Adjustments */
+.dark-mode .registration-container {
+    background-color: var(--card-bg-dark);
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group select {
+    background-color: var(--input-bg-dark);
+    border-color: var(--border-color-dark);
+}
+
+.dark-mode .upload-preview {
+    background-color: var(--input-bg-dark);
+    border-color: var(--border-color-dark);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+    .upload-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .upload-preview {
+        margin-bottom: 1rem;
+    }
+
+    .upload-controls {
+        text-align: center;
+    }
+} 
