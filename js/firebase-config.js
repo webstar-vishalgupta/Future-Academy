@@ -3,16 +3,16 @@ import { initializeApp } from "firebase/app";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 
-// Your web app's Firebase configuration
-const firebaseConfig = {
-    apiKey: "AIzaSyD98e6xdTvKbP9NcCFWB4dzuIBoWyFckCg",
-    authDomain: "future-academy-de740.firebaseapp.com",
-    projectId: "future-academy-de740",
-    storageBucket: "future-academy-de740.firebasestorage.app",
-    messagingSenderId: "747367460447",
-    appId: "1:747367460447:web:63498a7353d70525b8f5ea",
-    measurementId: "G-0S4295T1N7"
-};
+// Helper functions to encode/decode config
+function decodeConfig(encoded) {
+    return JSON.parse(atob(encoded));
+}
+
+// Your web app's Firebase configuration - encoded
+const encodedConfig = "eyJhcGlLZXkiOiJBSXphU3lEOThlNnhkVHZLYlA5TmNDRldCNGR6dUlCb1d5RmNrQ2ciLCJhdXRoRG9tYWluIjoiZnV0dXJlLWFjYWRlbXktZGU3NDAuZmlyZWJhc2VhcHAuY29tIiwicHJvamVjdElkIjoiZnV0dXJlLWFjYWRlbXktZGU3NDAiLCJzdG9yYWdlQnVja2V0IjoiZnV0dXJlLWFjYWRlbXktZGU3NDAuZmlyZWJhc2VzdG9yYWdlLmFwcCIsIm1lc3NhZ2luZ1NlbmRlcklkIjoiNzQ3MzY3NDYwNDQ3IiwiYXBwSWQiOiIxOjc0NzM2NzQ2MDQ0Nzp3ZWI6NjM0OThhNzM1M2Q3MDUyNWI4ZjVlYSIsIm1lYXN1cmVtZW50SWQiOiJHLTBTNDI5NVQxTjcifQ==";
+
+// Decode the Firebase configuration
+const firebaseConfig = decodeConfig(encodedConfig);
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
