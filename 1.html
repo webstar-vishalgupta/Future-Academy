@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work From Home Agency</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #25D366;
+            /* WhatsApp green */
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .hamburger {
+            cursor: pointer;
+            width: 30px;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links {
+            position: fixed;
+            top: 60px;
+            left: -100%;
+            width: 100%;
+            background-color: #128C7E;
+            /* Darker WhatsApp green */
+            transition: all 0.3s ease;
+        }
+
+        .nav-links.active {
+            left: 0;
+        }
+
+        .nav-links ul {
+            list-style: none;
+        }
+
+        .nav-links ul li {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-links ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Main Content Styles */
+        .container {
+            max-width: 1200px;
+            margin: 80px auto 0;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .profile {
+            margin: 2rem 0;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            /* border: 5px solid #25D366; */
+            margin-bottom: 1rem;
+        }
+
+        /* .chat-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .chat-btn:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        } */
+
+        .countdown {
+            margin-top: 3rem;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #25D366;
+        }
+
+        .countdown span {
+            display: inline-block;
+            margin: 0 -0.5px;
+        }
+
+        .countdown-label {
+            font-size: 1rem;
+            color: #666;
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            /* position: fixed; */
+            bottom: 0;
+            width: 100%;
+        }
+
+
+
+
+        .btn {
+            position: relative;
+            padding: 0.8rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+            background: none;
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            min-width: 200px;
+            z-index: 1;
+            text-decoration: none;
+            border-radius: 30px;
+        }
+
+        .neon-pulse {
+            background: #25D366;
+            border: 2px solid #25D366;
+            /* box-shadow: 0 0 10px #25D366; */
+            overflow: visible;
+        }
+
+        .neon-pulse::before,
+        .neon-pulse::after {
+            content: "";
+            position: absolute;
+            inset: -4px;
+            border: 2px solid rgb(38, 221, 47);
+            border-radius: inherit;
+            animation: pulseOut 2s ease-out infinite;
+            opacity: 0;
+        }
+
+        .neon-pulse::after {
+            animation-delay: 1s;
+        }
+
+        @keyframes pulseOut {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Work From Home</div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="profile">
+            <img src="https://webstar-vishalgupta.github.io/Future-Academy/images/developer.jpeg" alt="Profile Picture"
+                class="profile-pic">
+            <h1>Welcome to Our Agency</h1>
+            <p>We help businesses thrive in the work from home environment</p>
+        </div>
+
+        <a href="https://wa.me/1234567890" class="chat-btn btn neon-pulse" target="_blank">CONTINUE TO CHAT</a>
+
+        <div class="countdown">
+            <div>
+                <span id="minutes">05</span>
+                :
+                <span id="seconds">00</span>
+            </div>
+            <span class="countdown-label">Minutes Seconds</span>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2023 Work From Home Agency. All Rights Reserved.
+    </footer>
+
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Countdown Timer
+        function startCountdown() {
+            let minutes = 15;
+            let seconds = 0;
+
+            const countdown = setInterval(() => {
+                if (seconds === 0) {
+                    if (minutes === 0) {
+                        clearInterval(countdown);
+                        return;
+                    }
+                    minutes--;
+                    seconds = 59;
+                } else {
+                    seconds--;
+                }
+
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            }, 1000);
+        }
+
+        // Start countdown when page loads
+        window.onload = startCountdown;
+    </script>
+</body>
+
+</html>
